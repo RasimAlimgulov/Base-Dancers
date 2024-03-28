@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dancersbase.Controllers.DeleteController">
+   <children>
+      <Pane prefHeight="54.0" prefWidth="600.0" style="-fx-background-color: #FF0033;">
+         <children>
+            <Label layoutX="82.0" layoutY="17.0" prefHeight="18.0" prefWidth="437.0" text="Внимание! После удаления, востановление данных не возможно!" textFill="#fcfcfc">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="backbutton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #19ff19;" text="Назад" textFill="WHITE">
+               <font>
+                  <Font name="Impact" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Pane prefHeight="350.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="delete_table" layoutX="30.0" layoutY="48.0" prefHeight="155.0" prefWidth="329.0">
+              <columns>
+                <TableColumn fx:id="col_IDdelete" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="col_NAMEdelete" prefWidth="75.0" text="Имя" />
+                  <TableColumn fx:id="col_SECNAMEdelete" prefWidth="97.0" text="Фамилия" />
+                  <TableColumn fx:id="col_THIRDNAMEdelete" prefWidth="81.0" text="Отчество" />
+              </columns>
+            </TableView>
+            <Pane layoutX="30.0" layoutY="228.0" prefHeight="32.0" prefWidth="329.0" style="-fx-background-color: gray;">
+               <children>
+                   <Label fx:id="selectedid" layoutX="4.0" layoutY="6.0" prefHeight="17.0" prefWidth="46.0" text="id" />
+                   <Label fx:id="Selectedname" layoutX="65.0" layoutY="5.0" prefHeight="18.0" prefWidth="55.0" text="Имя" />
+                   <Label fx:id="selectedsecname" layoutX="151.0" layoutY="5.0" prefHeight="18.0" prefWidth="55.0" text="Фамилия" />
+                   <Label fx:id="selectedthirdname" layoutX="233.0" layoutY="5.0" prefHeight="18.0" prefWidth="65.0" text="Отчество" />
+               </children>
+            </Pane>
+            <Button fx:id="deletebutton" layoutX="415.0" layoutY="287.0" mnemonicParsing="false" text="Удалить данные" />
+            <TextArea layoutX="378.0" layoutY="48.0" prefHeight="61.0" prefWidth="179.0" style="-fx-border-color: yellow;" text="Для удаления кликните на &#10;спортсмена и нажмите &#10;на кнопку &quot;Удалить данные&quot;" />
+            <Label fx:id="succesfull" layoutX="407.0" layoutY="237.0" text="Удаление выполнено!" textFill="#00fc15" visible="false" />
+         </children></Pane>
+   </children>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dancersbase.Controllers.MainPageController">
+   <children>
+      <Pane prefHeight="82.0" prefWidth="600.0" style="-fx-background-color: #00A693;">
+         <children>
+            <Label layoutX="28.0" layoutY="20.0" text="База спортсменов" textFill="#f2f2f2">
+               <font>
+                  <Font name="Impact" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane prefHeight="320.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="addbutton" layoutX="25.0" layoutY="260.0" mnemonicParsing="false" text="Добавить спортсмена" />
+            <Button fx:id="createbutton" layoutX="194.0" layoutY="260.0" mnemonicParsing="false" text="Изменить данные" />
+            <Button fx:id="deletebutton" layoutX="336.0" layoutY="260.0" mnemonicParsing="false" text="Удалить данные о спортсмене" />
+            <TableView fx:id="dancersTable" layoutX="51.0" layoutY="14.0" prefHeight="200.0" prefWidth="457.0">
+              <columns>
+                <TableColumn fx:id="col_id" prefWidth="48.0" text="id" />
+                <TableColumn fx:id="col_name" prefWidth="98.0" text="Имя" />
+                  <TableColumn fx:id="col_Seconname" prefWidth="171.0" text="Фамилия" />
+                  <TableColumn fx:id="col_thirdname" prefWidth="139.0" text="Отчество" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</VBox>
