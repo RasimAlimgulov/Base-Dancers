@@ -1,7 +1,7 @@
 package com.example.dancersbase;
 import java.sql.*;
 public class ConnectorMananger {
-    private static Connection connection;
+    private final static Connection connection;
 
     static {
         try {
@@ -12,7 +12,8 @@ public class ConnectorMananger {
         }
     }
 
-public static Connection getConnection() throws SQLException {
+public static Connection getConnection()  {
    return  connection;
 }
+
 }
